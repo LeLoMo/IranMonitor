@@ -105,8 +105,9 @@ body::before {
 }
 
 .audio-init-content p {
-    color: var(--text-secondary);
+    color: #d1d5db;
     margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 .audio-init-content .btn {
@@ -117,6 +118,14 @@ body::before {
     background: var(--gradient-primary);
     border: none;
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.audio-init-content .btn i {
+    font-size: 1.3rem;
+    color: white;
 }
 
 .audio-init-content .btn:hover {
@@ -147,6 +156,11 @@ body::before {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.dashboard-header small {
+    color: #d1d5db;
+    font-size: 0.95rem;
 }
 
 .status-indicator {

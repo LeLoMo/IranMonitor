@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cyqqkdSJwIanMoSuF/lioW5ClfPrPH+PzvC4zUIHndw=",
+  "Hash": "7aNyMOaXqMIrJ/YrpFTIHqgmIoSiF0+ic8p4bUWAuD8=",
   "Source": "Barometer",
   "BasePath": "_content/Barometer",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-8l4h40tgnq.gz",
+      "Identity": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-wj2pqqylkq.gz",
       "SourceId": "Barometer",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Barometer",
-      "RelativePath": "css/custom#[.{fingerprint=8l4h40tgnq}]?.css.gz",
+      "RelativePath": "css/custom#[.{fingerprint=wj2pqqylkq}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -31,8 +31,8 @@
       "RelatedAsset": "C:\\Users\\Pc\\Desktop\\iranMonitor\\wwwroot\\css\\custom.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "hxd8raqurz",
-      "Integrity": "e4RRnnJ1oH7vcddGBxqk7p1Ke2DakJt2jE7VnZXbQ4E=",
+      "Fingerprint": "wo071ucezn",
+      "Integrity": "QBgZJDC/Qr5XN1QYAnpUab/0hOBnZgK/iNOqS3yvOfc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Pc\\Desktop\\iranMonitor\\wwwroot\\css\\custom.css"
@@ -59,12 +59,12 @@
       "OriginalItemSpec": "C:\\Users\\Pc\\Desktop\\iranMonitor\\wwwroot\\js\\app.js"
     },
     {
-      "Identity": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-7xqk4bfjng.gz",
+      "Identity": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-e3u6hn4sb9.gz",
       "SourceId": "Barometer",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Barometer",
-      "RelativePath": "index#[.{fingerprint=7xqk4bfjng}]?.html.gz",
+      "RelativePath": "index#[.{fingerprint=e3u6hn4sb9}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -73,8 +73,8 @@
       "RelatedAsset": "C:\\Users\\Pc\\Desktop\\iranMonitor\\wwwroot\\index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "gvjpb1r3xq",
-      "Integrity": "JNCOoGmOb4SSOVwowXh8INkmAeDNn3KNnq2zA3pFebs=",
+      "Fingerprint": "stwgweokt0",
+      "Integrity": "0F1nNf6pjePDo+oNOp1OcKMJ8ZpAAfjfSPAMtpnmRaU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Pc\\Desktop\\iranMonitor\\wwwroot\\index.html"
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8l4h40tgnq",
-      "Integrity": "hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho=",
+      "Fingerprint": "wj2pqqylkq",
+      "Integrity": "1MSH9wZA3IvrIjNLzz01KPJR7SfWZz5wQp2UJlvOLPg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\custom.css"
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7xqk4bfjng",
-      "Integrity": "tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI=",
+      "Fingerprint": "e3u6hn4sb9",
+      "Integrity": "JnUIFBFuZvDZK3pGskDBNSAzvj9JgCfEqzc4dc1ZUqo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -166,13 +166,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/custom.8l4h40tgnq.css",
-      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-8l4h40tgnq.gz",
+      "Route": "css/custom.css",
+      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-wj2pqqylkq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000301386377"
+          "Quality": "0.000297441999"
         }
       ],
       "ResponseHeaders": [
@@ -182,19 +182,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3317"
+          "Value": "3361"
         },
         {
           "Name": "ETag",
-          "Value": "\"e4RRnnJ1oH7vcddGBxqk7p1Ke2DakJt2jE7VnZXbQ4E=\""
+          "Value": "\"QBgZJDC/Qr5XN1QYAnpUab/0hOBnZgK/iNOqS3yvOfc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:19:30 GMT"
+          "Value": "Fri, 23 Jan 2026 18:47:24 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -210,26 +210,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho=\""
+          "Value": "W/\"1MSH9wZA3IvrIjNLzz01KPJR7SfWZz5wQp2UJlvOLPg=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "8l4h40tgnq"
-        },
-        {
-          "Name": "label",
-          "Value": "css/custom.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho="
+          "Value": "sha256-1MSH9wZA3IvrIjNLzz01KPJR7SfWZz5wQp2UJlvOLPg="
         }
       ]
     },
     {
-      "Route": "css/custom.8l4h40tgnq.css",
+      "Route": "css/custom.css",
       "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\wwwroot\\css\\custom.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -239,7 +231,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "15011"
+          "Value": "15248"
         },
         {
           "Name": "Content-Type",
@@ -247,11 +239,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho=\""
+          "Value": "\"1MSH9wZA3IvrIjNLzz01KPJR7SfWZz5wQp2UJlvOLPg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:19:30 GMT"
+          "Value": "Fri, 23 Jan 2026 18:47:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1MSH9wZA3IvrIjNLzz01KPJR7SfWZz5wQp2UJlvOLPg="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom.css.gz",
+      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-wj2pqqylkq.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3361"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QBgZJDC/Qr5XN1QYAnpUab/0hOBnZgK/iNOqS3yvOfc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 Jan 2026 18:47:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QBgZJDC/Qr5XN1QYAnpUab/0hOBnZgK/iNOqS3yvOfc="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom.wj2pqqylkq.css",
+      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-wj2pqqylkq.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000297441999"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3361"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QBgZJDC/Qr5XN1QYAnpUab/0hOBnZgK/iNOqS3yvOfc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 Jan 2026 18:47:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"1MSH9wZA3IvrIjNLzz01KPJR7SfWZz5wQp2UJlvOLPg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wj2pqqylkq"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1MSH9wZA3IvrIjNLzz01KPJR7SfWZz5wQp2UJlvOLPg="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom.wj2pqqylkq.css",
+      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\wwwroot\\css\\custom.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15248"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1MSH9wZA3IvrIjNLzz01KPJR7SfWZz5wQp2UJlvOLPg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 23 Jan 2026 18:47:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -261,7 +398,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8l4h40tgnq"
+          "Value": "wj2pqqylkq"
         },
         {
           "Name": "label",
@@ -269,13 +406,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho="
+          "Value": "sha256-1MSH9wZA3IvrIjNLzz01KPJR7SfWZz5wQp2UJlvOLPg="
         }
       ]
     },
     {
-      "Route": "css/custom.8l4h40tgnq.css.gz",
-      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-8l4h40tgnq.gz",
+      "Route": "css/custom.wj2pqqylkq.css.gz",
+      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-wj2pqqylkq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -284,7 +421,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3317"
+          "Value": "3361"
         },
         {
           "Name": "Content-Type",
@@ -292,11 +429,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"e4RRnnJ1oH7vcddGBxqk7p1Ke2DakJt2jE7VnZXbQ4E=\""
+          "Value": "\"QBgZJDC/Qr5XN1QYAnpUab/0hOBnZgK/iNOqS3yvOfc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:19:30 GMT"
+          "Value": "Fri, 23 Jan 2026 18:47:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -314,7 +451,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "8l4h40tgnq"
+          "Value": "wj2pqqylkq"
         },
         {
           "Name": "label",
@@ -322,18 +459,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-e4RRnnJ1oH7vcddGBxqk7p1Ke2DakJt2jE7VnZXbQ4E="
+          "Value": "sha256-QBgZJDC/Qr5XN1QYAnpUab/0hOBnZgK/iNOqS3yvOfc="
         }
       ]
     },
     {
-      "Route": "css/custom.css",
-      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-8l4h40tgnq.gz",
+      "Route": "index.e3u6hn4sb9.html",
+      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-e3u6hn4sb9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000301386377"
+          "Quality": "0.000554631170"
         }
       ],
       "ResponseHeaders": [
@@ -343,152 +480,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3317"
+          "Value": "1802"
         },
         {
           "Name": "ETag",
-          "Value": "\"e4RRnnJ1oH7vcddGBxqk7p1Ke2DakJt2jE7VnZXbQ4E=\""
+          "Value": "\"0F1nNf6pjePDo+oNOp1OcKMJ8ZpAAfjfSPAMtpnmRaU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:19:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho="
-        }
-      ]
-    },
-    {
-      "Route": "css/custom.css",
-      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\wwwroot\\css\\custom.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "15011"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:19:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho="
-        }
-      ]
-    },
-    {
-      "Route": "css/custom.css.gz",
-      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\gh834fytsl-8l4h40tgnq.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3317"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"e4RRnnJ1oH7vcddGBxqk7p1Ke2DakJt2jE7VnZXbQ4E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:19:30 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-e4RRnnJ1oH7vcddGBxqk7p1Ke2DakJt2jE7VnZXbQ4E="
-        }
-      ]
-    },
-    {
-      "Route": "index.7xqk4bfjng.html",
-      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-7xqk4bfjng.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000548546352"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1822"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JNCOoGmOb4SSOVwowXh8INkmAeDNn3KNnq2zA3pFebs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:24:20 GMT"
+          "Value": "Fri, 23 Jan 2026 18:43:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -508,13 +508,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI=\""
+          "Value": "W/\"JnUIFBFuZvDZK3pGskDBNSAzvj9JgCfEqzc4dc1ZUqo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7xqk4bfjng"
+          "Value": "e3u6hn4sb9"
         },
         {
           "Name": "label",
@@ -522,12 +522,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI="
+          "Value": "sha256-JnUIFBFuZvDZK3pGskDBNSAzvj9JgCfEqzc4dc1ZUqo="
         }
       ]
     },
     {
-      "Route": "index.7xqk4bfjng.html",
+      "Route": "index.e3u6hn4sb9.html",
       "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -537,7 +537,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8530"
+          "Value": "8463"
         },
         {
           "Name": "Content-Type",
@@ -545,11 +545,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI=\""
+          "Value": "\"JnUIFBFuZvDZK3pGskDBNSAzvj9JgCfEqzc4dc1ZUqo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:24:20 GMT"
+          "Value": "Fri, 23 Jan 2026 18:43:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -559,7 +559,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7xqk4bfjng"
+          "Value": "e3u6hn4sb9"
         },
         {
           "Name": "label",
@@ -567,13 +567,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI="
+          "Value": "sha256-JnUIFBFuZvDZK3pGskDBNSAzvj9JgCfEqzc4dc1ZUqo="
         }
       ]
     },
     {
-      "Route": "index.7xqk4bfjng.html.gz",
-      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-7xqk4bfjng.gz",
+      "Route": "index.e3u6hn4sb9.html.gz",
+      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-e3u6hn4sb9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -582,7 +582,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1822"
+          "Value": "1802"
         },
         {
           "Name": "Content-Type",
@@ -590,11 +590,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JNCOoGmOb4SSOVwowXh8INkmAeDNn3KNnq2zA3pFebs=\""
+          "Value": "\"0F1nNf6pjePDo+oNOp1OcKMJ8ZpAAfjfSPAMtpnmRaU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:24:20 GMT"
+          "Value": "Fri, 23 Jan 2026 18:43:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -612,7 +612,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "7xqk4bfjng"
+          "Value": "e3u6hn4sb9"
         },
         {
           "Name": "label",
@@ -620,18 +620,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-JNCOoGmOb4SSOVwowXh8INkmAeDNn3KNnq2zA3pFebs="
+          "Value": "sha256-0F1nNf6pjePDo+oNOp1OcKMJ8ZpAAfjfSPAMtpnmRaU="
         }
       ]
     },
     {
       "Route": "index.html",
-      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-7xqk4bfjng.gz",
+      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-e3u6hn4sb9.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000548546352"
+          "Quality": "0.000554631170"
         }
       ],
       "ResponseHeaders": [
@@ -641,15 +641,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1822"
+          "Value": "1802"
         },
         {
           "Name": "ETag",
-          "Value": "\"JNCOoGmOb4SSOVwowXh8INkmAeDNn3KNnq2zA3pFebs=\""
+          "Value": "\"0F1nNf6pjePDo+oNOp1OcKMJ8ZpAAfjfSPAMtpnmRaU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:24:20 GMT"
+          "Value": "Fri, 23 Jan 2026 18:43:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -669,13 +669,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI=\""
+          "Value": "W/\"JnUIFBFuZvDZK3pGskDBNSAzvj9JgCfEqzc4dc1ZUqo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI="
+          "Value": "sha256-JnUIFBFuZvDZK3pGskDBNSAzvj9JgCfEqzc4dc1ZUqo="
         }
       ]
     },
@@ -690,7 +690,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8530"
+          "Value": "8463"
         },
         {
           "Name": "Content-Type",
@@ -698,11 +698,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI=\""
+          "Value": "\"JnUIFBFuZvDZK3pGskDBNSAzvj9JgCfEqzc4dc1ZUqo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:24:20 GMT"
+          "Value": "Fri, 23 Jan 2026 18:43:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -712,13 +712,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI="
+          "Value": "sha256-JnUIFBFuZvDZK3pGskDBNSAzvj9JgCfEqzc4dc1ZUqo="
         }
       ]
     },
     {
       "Route": "index.html.gz",
-      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-7xqk4bfjng.gz",
+      "AssetFile": "C:\\Users\\Pc\\Desktop\\iranMonitor\\obj\\Debug\\net9.0\\compressed\\t93xq621yi-e3u6hn4sb9.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -727,7 +727,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1822"
+          "Value": "1802"
         },
         {
           "Name": "Content-Type",
@@ -735,11 +735,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JNCOoGmOb4SSOVwowXh8INkmAeDNn3KNnq2zA3pFebs=\""
+          "Value": "\"0F1nNf6pjePDo+oNOp1OcKMJ8ZpAAfjfSPAMtpnmRaU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 23 Jan 2026 18:24:20 GMT"
+          "Value": "Fri, 23 Jan 2026 18:43:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -757,7 +757,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JNCOoGmOb4SSOVwowXh8INkmAeDNn3KNnq2zA3pFebs="
+          "Value": "sha256-0F1nNf6pjePDo+oNOp1OcKMJ8ZpAAfjfSPAMtpnmRaU="
         }
       ]
     },
