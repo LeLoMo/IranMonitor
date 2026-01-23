@@ -12,29 +12,29 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"15011"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022hHqlIKQdmtWYIoLkkBQyvwW2z5EzuRdf6egJr2dj8ho=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 18:19:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Barometer/index.7xqk4bfjng.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7xqk4bfjng"},{"Name":"integrity","Value":"sha256-tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI="},{"Name":"label","Value":"_content/Barometer/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8530"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 18:24:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Barometer/index.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-xLg5oPIssPTNSGROBcQFblAcrp2ZVHMSHdFnawb3GwQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"8533"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022xLg5oPIssPTNSGROBcQFblAcrp2ZVHMSHdFnawb3GwQ=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 18:18:35 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"8530"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022tfpdc4vQ9fWKdtiv/gELlixFoVJ/88MefkopKZIKMYI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 18:24:20 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Barometer/index.ky2xmd129f.html">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ky2xmd129f"},{"Name":"integrity","Value":"sha256-xLg5oPIssPTNSGROBcQFblAcrp2ZVHMSHdFnawb3GwQ="},{"Name":"label","Value":"_content/Barometer/index.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8533"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022xLg5oPIssPTNSGROBcQFblAcrp2ZVHMSHdFnawb3GwQ=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 18:18:35 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Barometer/js/app.dksahr4j3i.js">
+    <StaticWebAssetEndpoint Include="_content/Barometer/js/app.flly5j1b3c.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\app.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dksahr4j3i"},{"Name":"integrity","Value":"sha256-HazQa\u002BbEqCN9YPI3M5kzgNWG\u002BQSP9Ghb2HTLyePnu84="},{"Name":"label","Value":"_content/Barometer/js/app.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14988"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022HazQa\u002BbEqCN9YPI3M5kzgNWG\u002BQSP9Ghb2HTLyePnu84=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 18:19:00 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"flly5j1b3c"},{"Name":"integrity","Value":"sha256-08JRJHcv5kEESXQ3tLeK57Hm4v1Jp2HJYHMM9/eu27Y="},{"Name":"label","Value":"_content/Barometer/js/app.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14988"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u002208JRJHcv5kEESXQ3tLeK57Hm4v1Jp2HJYHMM9/eu27Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 18:26:57 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Barometer/js/app.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\app.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HazQa\u002BbEqCN9YPI3M5kzgNWG\u002BQSP9Ghb2HTLyePnu84="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"14988"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022HazQa\u002BbEqCN9YPI3M5kzgNWG\u002BQSP9Ghb2HTLyePnu84=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 18:19:00 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-08JRJHcv5kEESXQ3tLeK57Hm4v1Jp2HJYHMM9/eu27Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"14988"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u002208JRJHcv5kEESXQ3tLeK57Hm4v1Jp2HJYHMM9/eu27Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 23 Jan 2026 18:26:57 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Barometer/sounds/alert.0mijrzysav.mp3">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\sounds\alert.mp3'))</AssetFile>

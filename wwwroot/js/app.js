@@ -218,7 +218,7 @@
             bigTradeHtml = `
                 <div class="big-trade-badge">
                     <i class="bi bi-lightning-charge-fill"></i>
-                    <span>Big Trade Detected (&gt;$20k)</span>
+                    <span>Big Trade Detected (&gt;$50k)</span>
                 </div>
             `;
         }

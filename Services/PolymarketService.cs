@@ -35,10 +35,13 @@ public class PolymarketService : IPolymarketService
 
         var slug = _config["ApiSettings:PolymarketSlug"] ?? "us-strikes-iran-by";
         var cacheMinutes = int.Parse(_config["ApiSettings:PolymarketCacheMinutes"] ?? "5");
-        var bigTradeThreshold = double.Parse(_config["ApiSettings:BigTradeThreshold"] ?? "20000");
+        var bigTradeThreshold = double.Parse(_config["ApiSettings:BigTradeThreshold"] ?? "50000");
+        var targetMarketDate = _config["ApiSettings:TargetMarketDate"] ?? "January 26";
 
         // Use the /events endpoint - this returns the event with all its sub-markets
         var url = $"https://gamma-api.polymarket.com/events?slug={slug}";
+        
+        _logger.LogInformation("Fetching Polymarket data for target date: {Date}", targetMarketDate);
 
         try
         {
@@ -71,36 +74,43 @@ public class PolymarketService : IPolymarketService
                 // Get the markets array from the event
                 if (eventData.TryGetProperty("markets", out var markets) && markets.ValueKind == JsonValueKind.Array)
                 {
-                    // Find the most relevant active market (not closed, closest date)
-                    JsonElement? bestMarket = null;
-                    DateTime? bestEndDate = null;
+                    // Find the specific target market (e.g., January 26)
+                    JsonElement? targetMarket = null;
 
                     foreach (var market in markets.EnumerateArray())
                     {
                         var isClosed = market.TryGetProperty("closed", out var closed) && closed.GetBoolean();
                         if (isClosed) continue;
 
-                        var acceptingOrders = market.TryGetProperty("acceptingOrders", out var accepting) && accepting.GetBoolean();
-                        if (!acceptingOrders) continue;
-
-                        if (market.TryGetProperty("endDate", out var endDateProp))
+                        // Check question field for target date
+                        if (market.TryGetProperty("question", out var questionProp))
                         {
-                            var endDateStr = endDateProp.GetString();
-                            if (DateTime.TryParse(endDateStr, out var endDate))
+                            var questionStr = questionProp.GetString() ?? "";
+                            if (questionStr.Contains(targetMarketDate, StringComparison.OrdinalIgnoreCase))
                             {
-                                if (endDate > DateTime.UtcNow && (bestEndDate == null || endDate < bestEndDate))
-                                {
-                                    bestEndDate = endDate;
-                                    bestMarket = market;
-                                }
+                                targetMarket = market;
+                                _logger.LogInformation("Found target market: {Question}", questionStr);
+                                break;
+                            }
+                        }
+                        
+                        // Fallback: check groupItemTitle
+                        if (market.TryGetProperty("groupItemTitle", out var groupTitle))
+                        {
+                            var titleStr = groupTitle.GetString() ?? "";
+                            if (titleStr.Contains(targetMarketDate, StringComparison.OrdinalIgnoreCase))
+                            {
+                                targetMarket = market;
+                                _logger.LogInformation("Found target market via groupItemTitle: {Title}", titleStr);
+                                break;
                             }
                         }
                     }
 
-                    // Parse the best market's outcome prices
-                    if (bestMarket.HasValue)
+                    // Parse the target market's outcome prices
+                    if (targetMarket.HasValue)
                     {
-                        var market = bestMarket.Value;
+                        var market = targetMarket.Value;
                         
                         if (market.TryGetProperty("question", out var question))
                         {
@@ -129,16 +139,37 @@ public class PolymarketService : IPolymarketService
                             result.Volume = volNum.GetDouble();
                         }
 
-                        // Check for big trades via volume24hr (as proxy for recent activity)
+                        // Big trade detection: The Gamma API doesn't provide individual trade data
+                        // We use a combination of high 24hr volume AND significant 1hr price movement
+                        // as a proxy for detecting large trades
+                        var hasHighVolume = false;
+                        var hasSignificantPriceMove = false;
+                        
                         if (market.TryGetProperty("volume24hr", out var vol24hr))
                         {
                             var volume24 = vol24hr.GetDouble();
-                            // If 24hr volume is significant, flag it
-                            if (volume24 > bigTradeThreshold * 10) // high activity threshold
-                            {
-                                result.BigTradeDetected = true;
-                            }
+                            // If hourly average volume exceeds threshold, that's significant
+                            hasHighVolume = (volume24 / 24.0) > bigTradeThreshold;
                         }
+                        
+                        if (market.TryGetProperty("oneHourPriceChange", out var priceChange))
+                        {
+                            var hourlyChange = Math.Abs(priceChange.GetDouble());
+                            // If price moved more than 1% in an hour, large trades likely occurred
+                            hasSignificantPriceMove = hourlyChange > 0.01;
+                        }
+                        
+                        // Flag big trade if both conditions are met
+                        result.BigTradeDetected = hasHighVolume && hasSignificantPriceMove;
+                        
+                        if (result.BigTradeDetected)
+                        {
+                            _logger.LogInformation("Big trade activity detected on {Market}", result.MarketTitle);
+                        }
+                    }
+                    else
+                    {
+                        _logger.LogWarning("Target market '{Date}' not found in active markets", targetMarketDate);
                     }
                 }
             }

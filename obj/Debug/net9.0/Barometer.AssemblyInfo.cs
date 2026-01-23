@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Barometer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39599b0c136984b3d0ed19a28ec59fda4e8d362c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28d68989f3538f80cf9e3bae62e38be7e530bd99")]
 [assembly: System.Reflection.AssemblyProductAttribute("Barometer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Barometer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
