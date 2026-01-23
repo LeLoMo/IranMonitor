@@ -1,0 +1,14 @@
+# Development settings with secrets
+appsettings.Development.json
+
+# Build outputs
+bin/
+obj/
+
+# IDE
+.vs/
+.vscode/
+*.user
+
+# Logs
+*.log
