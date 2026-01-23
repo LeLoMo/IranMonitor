@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barometer - Geopolitical Tension Monitor</title>
     <meta name="description" content="Real-time monitoring dashboard for geopolitical tension indicators">
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -15,6 +16,7 @@
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Audio initialization overlay -->
     <div id="audio-init-overlay" class="audio-overlay">
@@ -51,65 +53,7 @@
 
         <!-- Main Grid -->
         <div class="row g-4">
-            <!-- Weather Panel -->
-            <div class="col-12 col-lg-4">
-                <div class="status-card weather-card h-100">
-                    <div class="card-header-custom">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="bi bi-cloud-sun"></i>
-                                <h3>Tehran Weather</h3>
-                            </div>
-                            <span class="badge bg-secondary" id="weather-cache-badge">
-                                <i class="bi bi-clock"></i> --
-                            </span>
-                        </div>
-                        <p class="location-text mb-0">
-                            <i class="bi bi-geo-alt"></i> 35.6892°N, 51.3890°E
-                        </p>
-                    </div>
-                    <div class="card-body-custom">
-                        <div class="forecast-stream" id="weather-forecast">
-                            <div class="loading-state">
-                                <div class="spinner-border text-light" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                                <p>Loading forecast...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Polymarket Panel -->
-            <div class="col-12 col-lg-4">
-                <div class="status-card polymarket-card h-100">
-                    <div class="card-header-custom">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center gap-2">
-                                <i class="bi bi-graph-up-arrow"></i>
-                                <h3>Polymarket Tracker</h3>
-                            </div>
-                            <span class="badge bg-secondary" id="polymarket-cache-badge">
-                                <i class="bi bi-clock"></i> --
-                            </span>
-                        </div>
-                        <p class="market-title mb-0" id="market-title">US Strikes Iran</p>
-                    </div>
-                    <div class="card-body-custom">
-                        <div id="polymarket-data">
-                            <div class="loading-state">
-                                <div class="spinner-border text-light" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                                <p>Loading market data...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Alert Panel -->
+            <!-- Alert Panel (First) -->
             <div class="col-12 col-lg-4">
                 <div class="status-card alert-card h-100" id="alert-panel">
                     <div class="card-header-custom">
@@ -133,6 +77,68 @@
                                     <span class="visually-hidden">Loading...</span>
                                 </div>
                                 <p>Checking alert status...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Polymarket Panel (Second - Clickable) -->
+            <div class="col-12 col-lg-4">
+                <a href="https://polymarket.com/event/us-strikes-iran-by" target="_blank" class="polymarket-link"
+                    id="polymarket-link">
+                    <div class="status-card polymarket-card h-100">
+                        <div class="card-header-custom">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                    <h3>Polymarket Tracker</h3>
+                                    <i class="bi bi-box-arrow-up-right link-icon"></i>
+                                </div>
+                                <span class="badge bg-secondary" id="polymarket-cache-badge">
+                                    <i class="bi bi-clock"></i> --
+                                </span>
+                            </div>
+                            <p class="market-title mb-0" id="market-title">US Strikes Iran</p>
+                        </div>
+                        <div class="card-body-custom">
+                            <div id="polymarket-data">
+                                <div class="loading-state">
+                                    <div class="spinner-border text-light" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    <p>Loading market data...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Weather Panel (Third) -->
+            <div class="col-12 col-lg-4">
+                <div class="status-card weather-card h-100">
+                    <div class="card-header-custom">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-cloud-sun"></i>
+                                <h3>Tehran Weather</h3>
+                            </div>
+                            <span class="badge bg-secondary" id="weather-cache-badge">
+                                <i class="bi bi-clock"></i> --
+                            </span>
+                        </div>
+                        <p class="location-text mb-0">
+                            <i class="bi bi-clock"></i> Time Now: <span id="tehran-time">--:--</span>
+                        </p>
+                    </div>
+                    <div class="card-body-custom">
+                        <div class="forecast-stream" id="weather-forecast">
+                            <div class="loading-state">
+                                <div class="spinner-border text-light" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p>Loading forecast...</p>
                             </div>
                         </div>
                     </div>
@@ -169,4 +175,5 @@
     <!-- App JS -->
     <script src="js/app.js"></script>
 </body>
+
 </html>

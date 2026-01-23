@@ -3,7 +3,7 @@
  * Real-time geopolitical monitoring with jQuery AJAX
  */
 
-(function($) {
+(function ($) {
     'use strict';
 
     // ===================
@@ -32,7 +32,7 @@
 
     function initializeAudio() {
         if (state.audioInitialized) return;
-        
+
         // Create a silent play to unlock audio on iOS/Chrome
         if (alertSound) {
             alertSound.volume = 0;
@@ -63,7 +63,7 @@
     function updateConnectionStatus(connected, text) {
         const $dot = $('#connection-status');
         const $text = $('#connection-text');
-        
+
         $dot.removeClass('connected error');
         if (connected) {
             $dot.addClass('connected');
@@ -77,12 +77,24 @@
 
     function updateLastUpdateTime() {
         const now = new Date();
-        const timeStr = now.toLocaleTimeString('en-US', { 
-            hour: '2-digit', 
+        const timeStr = now.toLocaleTimeString('en-US', {
+            hour: '2-digit',
             minute: '2-digit',
             second: '2-digit'
         });
         $('#last-update-text').text(`Last update: ${timeStr}`);
+    }
+
+    function updateTehranTime() {
+        const now = new Date();
+        const tehranTime = now.toLocaleTimeString('en-US', {
+            timeZone: 'Asia/Tehran',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        });
+        $('#tehran-time').text(tehranTime);
     }
 
     function formatTime(timestamp) {
@@ -105,12 +117,12 @@
             url: `${CONFIG.apiBaseUrl}/weather`,
             method: 'GET',
             dataType: 'json',
-            success: function(data) {
+            success: function (data) {
                 renderWeather(data);
                 updateCacheBadge('#weather-cache-badge', data.cachedAt, data.isFromCache);
                 updateConnectionStatus(true, 'Connected');
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 console.error('Weather fetch error:', error);
                 renderWeatherError();
             }
@@ -119,7 +131,7 @@
 
     function renderWeather(data) {
         const $container = $('#weather-forecast');
-        
+
         if (!data.forecasts || data.forecasts.length === 0) {
             $container.html(`
                 <div class="error-state">
@@ -134,7 +146,7 @@
         data.forecasts.forEach(forecast => {
             const time = formatTime(forecast.timestamp);
             const iconUrl = getWeatherIconUrl(forecast.icon);
-            
+
             html += `
                 <div class="forecast-item">
                     <div class="forecast-time">
@@ -158,7 +170,7 @@
                 </div>
             `;
         });
-        
+
         $container.html(html);
     }
 
@@ -180,11 +192,11 @@
             url: `${CONFIG.apiBaseUrl}/polymarket`,
             method: 'GET',
             dataType: 'json',
-            success: function(data) {
+            success: function (data) {
                 renderPolymarket(data);
                 updateCacheBadge('#polymarket-cache-badge', data.cachedAt, data.isFromCache);
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 console.error('Polymarket fetch error:', error);
                 renderPolymarketError();
             }
@@ -194,13 +206,13 @@
     function renderPolymarket(data) {
         const $container = $('#polymarket-data');
         const $title = $('#market-title');
-        
+
         $title.text(data.marketTitle || 'US Strikes Iran');
-        
+
         const yesPercent = data.yesPercentage.toFixed(1);
         const noPercent = data.noPercentage.toFixed(1);
         const volumeFormatted = formatVolume(data.volume);
-        
+
         let bigTradeHtml = '';
         if (data.bigTradeDetected) {
             bigTradeHtml = `
@@ -210,7 +222,7 @@
                 </div>
             `;
         }
-        
+
         $container.html(`
             <div class="prediction-cards">
                 <div class="prediction-card yes-card">
@@ -257,12 +269,12 @@
             url: `${CONFIG.apiBaseUrl}/alerts`,
             method: 'GET',
             dataType: 'json',
-            success: function(data) {
+            success: function (data) {
                 renderAlerts(data);
                 updateCacheBadge('#alert-cache-badge', data.cachedAt, data.isFromCache);
                 handleAlertTransition(data);
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 console.error('Alerts fetch error:', error);
                 renderAlertsError();
             }
@@ -272,15 +284,15 @@
     function renderAlerts(data) {
         const $container = $('#alert-data');
         const $panel = $('#alert-panel');
-        
+
         // Remove previous state classes
         $panel.removeClass('major-alert');
-        
+
         let statusClass = 'safe';
         let iconClass = 'bi-shield-check';
         let statusText = 'Safe';
         let statusDesc = 'No major alerts detected';
-        
+
         if (data.isMajorAlert) {
             statusClass = 'major-alert';
             iconClass = 'bi-exclamation-triangle-fill';
@@ -293,7 +305,7 @@
             statusText = 'Alert Active';
             statusDesc = 'Alerts detected in some areas';
         }
-        
+
         let citiesHtml = '';
         if (data.activeCitiesEnglish && data.activeCitiesEnglish.length > 0) {
             const majorCities = data.majorCitiesInAlert || [];
@@ -301,7 +313,7 @@
                 const isMajor = majorCities.includes(city);
                 return `<span class="city-tag ${isMajor ? 'major' : ''}">${city}</span>`;
             }).join('');
-            
+
             citiesHtml = `
                 <div class="alert-cities-list">
                     <h4><i class="bi bi-geo-alt"></i> Active Alert Cities:</h4>
@@ -309,7 +321,7 @@
                 </div>
             `;
         }
-        
+
         $container.html(`
             <div class="alert-status ${statusClass}">
                 <div class="alert-icon">
@@ -324,13 +336,13 @@
 
     function handleAlertTransition(data) {
         const currentStatus = data.isMajorAlert ? 'MajorAlert' : (data.hasAnyAlert ? 'Alert' : 'Safe');
-        
+
         // Play sound only when transitioning from Safe to MajorAlert
         if (state.lastAlertStatus === 'Safe' && currentStatus === 'MajorAlert') {
             playAlertSound();
             console.log('Alert triggered: Safe -> MajorAlert');
         }
-        
+
         state.lastAlertStatus = currentStatus;
     }
 
@@ -353,20 +365,20 @@
             $badge.html('<i class="bi bi-clock"></i> --');
             return;
         }
-        
+
         const cached = new Date(cachedAt);
         const now = new Date();
         const diffMs = now - cached;
         const diffMins = Math.floor(diffMs / 60000);
         const diffSecs = Math.floor((diffMs % 60000) / 1000);
-        
+
         let timeText;
         if (diffMins > 0) {
             timeText = `${diffMins}m ago`;
         } else {
             timeText = `${diffSecs}s ago`;
         }
-        
+
         const cacheIcon = isFromCache ? 'bi-database-fill' : 'bi-cloud-download';
         $badge.html(`<i class="bi ${cacheIcon}"></i> ${timeText}`);
         $badge.removeClass('bg-secondary bg-success').addClass(isFromCache ? 'bg-secondary' : 'bg-success');
@@ -378,44 +390,46 @@
     function initDashboard() {
         // Remove overlay
         $('#audio-init-overlay').addClass('hidden');
-        
+
         // Initialize audio
         initializeAudio();
-        
+
         // Initial data fetch
         fetchWeather();
         fetchPolymarket();
         fetchAlerts();
-        
+
         // Set up polling intervals
         setInterval(fetchWeather, CONFIG.weatherInterval);
         setInterval(fetchPolymarket, CONFIG.polymarketInterval);
         setInterval(fetchAlerts, CONFIG.alertInterval);
-        
+
         // Update timestamp periodically
         setInterval(updateLastUpdateTime, 1000);
-        
+        setInterval(updateTehranTime, 1000);
+        updateTehranTime(); // Initial call
+
         console.log('Barometer Dashboard initialized');
     }
 
     // ===================
     // Event Handlers
     // ===================
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Audio init button click
-        $('#init-audio-btn').on('click', function() {
+        $('#init-audio-btn').on('click', function () {
             initDashboard();
         });
-        
+
         // Also initialize on any click (backup for mobile)
-        $(document).one('click', function() {
+        $(document).one('click', function () {
             if (!state.audioInitialized) {
                 initializeAudio();
             }
         });
-        
+
         // Keyboard shortcut - press 'S' to trigger test alert sound
-        $(document).on('keypress', function(e) {
+        $(document).on('keypress', function (e) {
             if (e.key === 's' || e.key === 'S') {
                 if (state.audioInitialized) {
                     playAlertSound();

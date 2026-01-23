@@ -12,9 +12,6 @@ C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\Barometer.AssemblyInfo.cs
 C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\Barometer.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\Barometer.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\scopedcss\bundle\Barometer.styles.css
-C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\compressed\gh834fytsl-3mfuculj0j.gz
-C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\compressed\t93xq621yi-j30pobi280.gz
-C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\compressed\jhhipie6d6-3ai30t2r6h.gz
 C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -30,3 +27,7 @@ C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\Barometer.pdb
 C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\Barometer.genruntimeconfig.cache
 C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\ref\Barometer.dll
 C:\Users\Pc\Desktop\iranMonitor\bin\Debug\net9.0\polymarket_response.json
+C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\Barometer.sourcelink.json
+C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\compressed\gh834fytsl-8l4h40tgnq.gz
+C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\compressed\t93xq621yi-ky2xmd129f.gz
+C:\Users\Pc\Desktop\iranMonitor\obj\Debug\net9.0\compressed\jhhipie6d6-dksahr4j3i.gz
