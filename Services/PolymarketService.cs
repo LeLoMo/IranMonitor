@@ -33,15 +33,12 @@ public class PolymarketService : IPolymarketService
             return cached;
         }
 
-        var slug = _config["ApiSettings:PolymarketSlug"] ?? "us-strikes-iran-by";
+        var slug = _config["ApiSettings:PolymarketSlug"] ?? "will-the-us-invade-iran-before-2027";
         var cacheMinutes = int.Parse(_config["ApiSettings:PolymarketCacheMinutes"] ?? "5");
-        var bigTradeThreshold = double.Parse(_config["ApiSettings:BigTradeThreshold"] ?? "50000");
-        var targetMarketDate = _config["ApiSettings:TargetMarketDate"] ?? "January 26";
+        var bigTradeThreshold = double.Parse(_config["ApiSettings:BigTradeThreshold"] ?? "10000");
 
-        // Use the /events endpoint - this returns the event with all its sub-markets
+        // Use the /events endpoint - this returns the event with all its markets
         var url = $"https://gamma-api.polymarket.com/events?slug={slug}";
-        
-        _logger.LogInformation("Fetching Polymarket data for target date: {Date}", targetMarketDate);
 
         try
         {
@@ -68,13 +65,13 @@ public class PolymarketService : IPolymarketService
             {
                 var eventData = root[0];
                 
-                result.MarketTitle = eventData.TryGetProperty("title", out var title) ? title.GetString() ?? "US Strikes Iran" : "US Strikes Iran";
+                result.MarketTitle = eventData.TryGetProperty("title", out var title) ? title.GetString() ?? "US Invades Iran" : "US Invades Iran";
                 result.Volume = eventData.TryGetProperty("volume", out var vol) ? vol.GetDouble() : 0;
 
                 // Get the markets array from the event
                 if (eventData.TryGetProperty("markets", out var markets) && markets.ValueKind == JsonValueKind.Array)
                 {
-                    // Find the specific target market (e.g., January 26)
+                    // This is a single-market event — take the first active (non-closed) market
                     JsonElement? targetMarket = null;
 
                     foreach (var market in markets.EnumerateArray())
@@ -82,32 +79,20 @@ public class PolymarketService : IPolymarketService
                         var isClosed = market.TryGetProperty("closed", out var closed) && closed.GetBoolean();
                         if (isClosed) continue;
 
-                        // Check question field for target date
-                        if (market.TryGetProperty("question", out var questionProp))
-                        {
-                            var questionStr = questionProp.GetString() ?? "";
-                            if (questionStr.Contains(targetMarketDate, StringComparison.OrdinalIgnoreCase))
-                            {
-                                targetMarket = market;
-                                _logger.LogInformation("Found target market: {Question}", questionStr);
-                                break;
-                            }
-                        }
-                        
-                        // Fallback: check groupItemTitle
-                        if (market.TryGetProperty("groupItemTitle", out var groupTitle))
-                        {
-                            var titleStr = groupTitle.GetString() ?? "";
-                            if (titleStr.Contains(targetMarketDate, StringComparison.OrdinalIgnoreCase))
-                            {
-                                targetMarket = market;
-                                _logger.LogInformation("Found target market via groupItemTitle: {Title}", titleStr);
-                                break;
-                            }
-                        }
+                        targetMarket = market;
+                        _logger.LogInformation("Found active market: {Question}", 
+                            market.TryGetProperty("question", out var q) ? q.GetString() : "unknown");
+                        break;
                     }
 
-                    // Parse the target market's outcome prices
+                    // If all markets are closed, fall back to the first one
+                    if (!targetMarket.HasValue && markets.GetArrayLength() > 0)
+                    {
+                        targetMarket = markets[0];
+                        _logger.LogWarning("All markets are closed, using first market as fallback");
+                    }
+
+                    // Parse the market's outcome prices
                     if (targetMarket.HasValue)
                     {
                         var market = targetMarket.Value;
@@ -169,7 +154,7 @@ public class PolymarketService : IPolymarketService
                     }
                     else
                     {
-                        _logger.LogWarning("Target market '{Date}' not found in active markets", targetMarketDate);
+                        _logger.LogWarning("No markets found in event '{Slug}'", slug);
                     }
                 }
             }
@@ -193,7 +178,7 @@ public class PolymarketService : IPolymarketService
             // Return a degraded response instead of throwing
             return new PolymarketDataDto
             {
-                MarketTitle = "US Strikes Iran (Service Unavailable)",
+                MarketTitle = "US Invades Iran (Service Unavailable)",
                 Slug = slug,
                 YesPercentage = 0,
                 NoPercentage = 0,

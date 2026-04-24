@@ -48,13 +48,38 @@
         }
     }
 
+    let alertLoopCount = 0;
+    const MAX_ALERT_LOOPS = 5;
+
     function playAlertSound() {
         if (alertSound && state.audioInitialized) {
-            alertSound.currentTime = 0;
-            alertSound.play().catch(err => {
-                console.error('Failed to play alert sound:', err);
-            });
+            alertLoopCount = 0;
+            playAlertLoop();
         }
+    }
+
+    function playAlertLoop() {
+        if (alertLoopCount >= MAX_ALERT_LOOPS) {
+            console.log('Alert sound finished (played ' + MAX_ALERT_LOOPS + ' times)');
+            return;
+        }
+
+        alertSound.currentTime = 0;
+        alertSound.play().then(() => {
+            alertLoopCount++;
+            console.log('Playing alert sound: ' + alertLoopCount + '/' + MAX_ALERT_LOOPS);
+        }).catch(err => {
+            console.error('Failed to play alert sound:', err);
+        });
+    }
+
+    // Listen for sound end to replay
+    if (alertSound) {
+        alertSound.addEventListener('ended', function () {
+            if (alertLoopCount < MAX_ALERT_LOOPS) {
+                playAlertLoop();
+            }
+        });
     }
 
     // ===================
@@ -207,7 +232,7 @@
         const $container = $('#polymarket-data');
         const $title = $('#market-title');
 
-        $title.text(data.marketTitle || 'US Strikes Iran');
+        $title.text(data.marketTitle || 'Will the US invade Iran before 2027?');
 
         const yesPercent = data.yesPercentage.toFixed(1);
         const noPercent = data.noPercentage.toFixed(1);

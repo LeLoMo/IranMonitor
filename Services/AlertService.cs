@@ -144,7 +144,7 @@ public class AlertService : IAlertService
                         result.MajorCitiesInAlert = majorCitiesFound;
 
                         // IsMajorAlert = TRUE only if ALL THREE major cities are present
-                        result.IsMajorAlert = majorCitiesFound.Count >= 3;
+                        result.IsMajorAlert = majorCitiesFound.Count >= 1;
                         result.Status = result.IsMajorAlert ? "MajorAlert" : "Alert";
                     }
                     else
